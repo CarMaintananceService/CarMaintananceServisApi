@@ -13,11 +13,9 @@ namespace Cars.Models.Domain
         public int? RepairActivityId { get; set; } //From RepairActivity Table
 
         
-        
-        
+                
         [ForeignKey("RepairActivityId")]
         public RepairActivity RepairActivity { get; set; }
-
 
 
 
