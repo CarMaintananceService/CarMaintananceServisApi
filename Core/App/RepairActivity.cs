@@ -11,7 +11,7 @@ namespace Cars.Models.Domain
     /// </summary>
     public class RepairActivity : AuditedEntity<int>
     {
-        
+
         public DateTime? AcceptanceDateOfTheVehicle { get; set; }
         public int? ServiceEntryKm { get; set; }
 
@@ -24,7 +24,7 @@ namespace Cars.Models.Domain
         [MaxLength(50)]
         public string? PersonnelReceivingTheVehicle { get; set; }
         public DateTime PlannedEndDate { get; set; }
-        public int? StatusId { get; set; }             //From Status Table
+        
 
         [MaxLength(500)]
         public string? ChangingPart { get; set; }

@@ -17,6 +17,20 @@ using Api.ScheduledServices;
 using Microsoft.OpenApi.Models;
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using Business.App.CaseTypes;
+using Business.App.Firms;
+using Business.App.Manufacturers;
+using Business.App.OutSourceLabors;
+using Business.App.RepairActivitys;
+using Business.App.ProductGroups;
+using Business.App.Settings;
+using Business.App.StockCards;
+using Business.App.StockCardBrands;
+using Business.App.StockCardUnits;
+using Business.App.StockMovements;
+using Business.App.Units;
+using Business.App.Vehicles;
+using Business.App.VehicleBrands;
+using Business.App.VehicleTypes;
 
 var builder = WebApplication.CreateBuilder(args);
 string AllowSpecificOrigins = "AllowSpecificOrigins";
@@ -55,6 +69,20 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped(typeof(JwtEngineUser), typeof(JwtEngineUser));
 builder.Services.AddScoped(typeof(CaseTypeEngine), typeof(CaseTypeEngine));
+builder.Services.AddScoped(typeof(FirmEngine), typeof(FirmEngine));
+builder.Services.AddScoped(typeof(ManufacturerEngine), typeof(ManufacturerEngine));
+builder.Services.AddScoped(typeof(OutSourceLaborEngine), typeof(OutSourceLaborEngine));
+builder.Services.AddScoped(typeof(RepairActivityEngine), typeof(RepairActivityEngine));
+builder.Services.AddScoped(typeof(ProductGroupEngine), typeof(ProductGroupEngine));
+builder.Services.AddScoped(typeof(SettingEngine), typeof(SettingEngine));
+builder.Services.AddScoped(typeof(StockCardEngine), typeof(StockCardEngine));
+builder.Services.AddScoped(typeof(StockCardBrandEngine), typeof(StockCardBrandEngine));
+builder.Services.AddScoped(typeof(StockCardUnitEngine), typeof(StockCardUnitEngine));
+builder.Services.AddScoped(typeof(StockMovementEngine), typeof(StockMovementEngine));
+builder.Services.AddScoped(typeof(UnitEngine), typeof(UnitEngine));
+builder.Services.AddScoped(typeof(VehicleEngine), typeof(VehicleEngine));
+builder.Services.AddScoped(typeof(VehicleBrandEngine), typeof(VehicleBrandEngine));
+builder.Services.AddScoped(typeof(VehicleTypeEngine), typeof(VehicleTypeEngine));
 
 #endregion
 

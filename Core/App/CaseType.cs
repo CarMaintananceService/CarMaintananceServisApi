@@ -8,7 +8,6 @@ namespace Cars.Models.Domain
     /// </summary>
     public class CaseType : AuditedEntity<int>
     {
-        public int Id { get; set; }
 
         [MaxLength(50)]
         public string? Name { get; set; }

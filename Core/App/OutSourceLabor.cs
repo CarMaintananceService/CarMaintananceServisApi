@@ -12,6 +12,15 @@ namespace Cars.Models.Domain
     {
         public int? RepairActivityId { get; set; } //From RepairActivity Table
 
+        
+        
+        
+        [ForeignKey("RepairActivityId")]
+        public RepairActivity RepairActivity { get; set; }
+
+
+
+
         [MaxLength(50)]
         public string? LaborName { get; set; }
 
@@ -20,14 +29,7 @@ namespace Cars.Models.Domain
 
         [MaxLength(50)]
         public string? PersonSurname { get; set; }
-
-        public string? Quantity { get; set; }
-
-        [ForeignKey("RepairActivityId")]  
-        public RepairActivity RepairActivity { get; set; }
-
-        
-
+        public int? Quantity { get; set; }
 
 
     }

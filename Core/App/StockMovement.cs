@@ -8,22 +8,28 @@ namespace Cars.Models.Domain
 {
     public class StockMovement : AuditedEntity<int>
     {
-        public int? StockMovementTypeId { get; set; }
-
-        [MaxLength(50)]
-        public string? Name { get; set; }
-        public DateTime? MovementDate { get; set; }
-        public int? InvoiceNo { get; set; }
-        public int? Price { get; set; }
         public int? ManufacturerId { get; set; }          //From Manufacturer Table
+        public int? StockCardId { get; set; }          //From Manufacturer Table
 
-        public StockMovementType StockMovementType { get; set; }
+
 
         [ForeignKey("StockCardId")]
         public StockCard StockCard { get; set; }
 
         [ForeignKey("ManufacturerId")]
         public Manufacturer Manufacturer { get; set; }
+
+
+
+
+        [MaxLength(50)]
+        public string? Name { get; set; }
+        public DateTime? MovementDate { get; set; }
+        public string? InvoiceNo { get; set; }
+        public double? Price { get; set; }
+        public StockMovementType StockMovementType { get; set; }
+
+        
 
     }
 }

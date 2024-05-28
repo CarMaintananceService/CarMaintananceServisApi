@@ -4,14 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cars.Models.Domain
 {
-    /// <summary>
-    /// BİRİMLER
-    /// </summary>
 
-    public class UnitInput : BaseDto
+    public class VehicleBrandInput : BaseDto
     {
 
         [MaxLength(50)]
-        public string? Name { get; set; }
+        public string? Name { get; set; } // get all the vehicles for a specific brand (one to many(has many))
     }
 }

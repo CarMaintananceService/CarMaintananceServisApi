@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Business.Shared.Base.Dtos;
 using Cars.Enums;
 using Core.Entities;
 using Core.Shared;

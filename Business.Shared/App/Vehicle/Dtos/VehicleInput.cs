@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Business.Shared.Base.Dtos;
 using Cars.Enums;
 using Core.Entities;
 
@@ -8,32 +9,12 @@ namespace Cars.Models.Domain
     /// <summary>
     /// Araçlar
     /// </summary>
-    public class Vehicle : AuditedEntity<int>
+
+    public class VehicleInput : BaseDto
     {
-        public int? VehicleBrandId { get; set; }            
-        public int? VehicleTypeId { get; set; }         
-        public int? CaseTypeId { get; set; }           
-
-
-
-
-
-        [ForeignKey("VehicleBrandId")]  
-        public VehicleBrand VehicleBrand { get; set; }
-
-        [ForeignKey("VehicleTypeId")]  
-        public VehicleType VehicleType { get; set; }
-
-        [ForeignKey("CaseTypeId")] 
-        public CaseType CaseType { get; set; }
-
-
-
-
-
         [MaxLength(50)]
         public string? LicensePlateNo { get; set; }
-   
+        public int? VehicleBrandId { get; set; }            //From VehicleBrand Table 
 
         [MaxLength(50)]
         public string? Model { get; set; }
@@ -47,7 +28,8 @@ namespace Cars.Models.Domain
 
         [MaxLength(50)]
         public string? License { get; set; }
-
+        public int? VehicleTypeId { get; set; }         //From VehicleType Table
+        public int? CaseTypeId { get; set; }           //From CaseType Table
 
         [MaxLength(50)]
         public string? Chance { get; set; }
@@ -96,8 +78,11 @@ namespace Cars.Models.Domain
         /// </summary>
         [MaxLength(500)]
         public string? Description { get; set; }
-
         public FuelType FuelType { get; set; }
 
+
+
     }
+
+
 }
