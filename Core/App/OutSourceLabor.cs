@@ -27,7 +27,7 @@ namespace Cars.Models.Domain
 
         [MaxLength(50)]
         public string? PersonSurname { get; set; }
-        public double? Quantity { get; set; }
+        public int? Quantity { get; set; }
 
 
     }
