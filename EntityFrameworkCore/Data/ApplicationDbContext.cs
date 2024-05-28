@@ -204,12 +204,16 @@ namespace EntityFrameworkCore.Data
                 return base.SaveChanges();
         }
 
+        //public ApplicationDbContext()
+        //{
 
+        //}
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
 
+        #region global
 
         public DbSet<ProductGroup> ProductGroups { get; set; }
         public DbSet<RepairActivity> RepairActivitys { get; set; }
@@ -227,25 +231,23 @@ namespace EntityFrameworkCore.Data
         public DbSet<OutSourceLabor> OutSourceLabors { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }
         
-
-
-
-        #region global
-
-
-
-
         #endregion
 
-        #region security
 
+        #region security
 
         public DbSet<User> Users { get; set; }
 
         #endregion
 
 
-
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseSqlServer("YourConnectionStringHere");
+        //    }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

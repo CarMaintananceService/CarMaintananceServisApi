@@ -10,7 +10,7 @@ namespace Cars.Models.Domain
     /// </summary>
     public class OutSourceLabor : AuditedEntity<int>
     {
-        public int? RepairActivityId { get; set; } //From RepairActivity Table
+        public int? RepairActivityId { get; set; } 
 
         
                 

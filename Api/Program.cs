@@ -120,7 +120,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "SuAtm", Version = $"{AppInfo.VersionNumber}.{AppInfo.VersionNumberMinor}" });
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Car Maintanance", Version = $"{AppInfo.VersionNumber}.{AppInfo.VersionNumberMinor}" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -219,11 +219,11 @@ var app = builder.Build();
 
 
 app.UseDeveloperExceptionPage();
-
+app.UseExceptionHandler("/error");
 
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
+ 
     app.UseHsts();
 }
 
@@ -252,7 +252,7 @@ app.UseSwagger();
 
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "SuAtm");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "CarMaintanance");
     c.RoutePrefix = "";
 });
 

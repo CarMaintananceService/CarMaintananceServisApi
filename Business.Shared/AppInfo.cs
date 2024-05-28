@@ -8,8 +8,8 @@ namespace Business.Shared
 {
     public class AppInfo
     {
-        public static string VersionNumber = "202309";
-        public static string VersionNumberMinor = "6";
+        public static string VersionNumber = "202429";
+        public static string VersionNumberMinor = "0";
 
 
         public string CompanyName { get; set; }
@@ -18,8 +18,7 @@ namespace Business.Shared
 		public string DateFormat { get; set; }
         public bool IsConnectionStringEncrypted { get; set; }
         public bool IsMailSendingActive { get; set; }
-        public int MailSendingStartDelay { get; set; }
-        public int MailSendingEachDelay { get; set; }
+
     
     }
 }
