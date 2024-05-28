@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RemoteWork\NewFolder\**" />
+    <Compile Remove="System\**" />
+    <EmbeddedResource Remove="RemoteWork\NewFolder\**" />
+    <EmbeddedResource Remove="System\**" />
+    <None Remove="RemoteWork\NewFolder\**" />
+    <None Remove="System\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="7.18.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business.Shared\Business.Shared.csproj" />
+    <ProjectReference Include="..\EntityFrameworkCore\EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App\" />
+  </ItemGroup>
+
+
+</Project>
