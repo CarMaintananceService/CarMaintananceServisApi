@@ -51,6 +51,7 @@ namespace Api.Controllers
 				return new TResponse<AccessTokenResponse>("Invalid user info");
 			}
 #endif
+
 			AccessTokenResponse accessTokenResponse = _jwtEngine.CreateAccessToken(user);
 			
 			await _userLoginEngine.UpdateTokenInfo(user.Id, accessTokenResponse.AccessToken.RefreshToken, DateTime.Now.AddMinutes(_tokenOptions.RefreshTokenExpiration), user.UserRightsView);
