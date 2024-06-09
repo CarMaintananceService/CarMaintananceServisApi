@@ -68,6 +68,7 @@ builder.Services.AddHttpContextAccessor();
 
 
 builder.Services.AddScoped(typeof(JwtEngineUser), typeof(JwtEngineUser));
+builder.Services.AddScoped(typeof(UserLoginEngine), typeof(UserLoginEngine));
 builder.Services.AddScoped(typeof(CaseTypeEngine), typeof(CaseTypeEngine));
 builder.Services.AddScoped(typeof(FirmEngine), typeof(FirmEngine));
 builder.Services.AddScoped(typeof(ManufacturerEngine), typeof(ManufacturerEngine));
@@ -101,11 +102,11 @@ builder.Services.AddScoped(typeof(VehicleTypeEngine), typeof(VehicleTypeEngine))
 //        });
 //});
 
-builder.Services.AddHangfire(config =>
-{
-    config.UseSqlServerStorage(DefaultConnectionString).WithJobExpirationTimeout(TimeSpan.FromHours(6));
-});
-builder.Services.AddHangfireServer();
+//builder.Services.AddHangfire(config =>
+//{
+//    config.UseSqlServerStorage(DefaultConnectionString).WithJobExpirationTimeout(TimeSpan.FromHours(6));
+//});
+//builder.Services.AddHangfireServer();
 
 
 

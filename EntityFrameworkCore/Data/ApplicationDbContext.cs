@@ -204,10 +204,10 @@ namespace EntityFrameworkCore.Data
                 return base.SaveChanges();
         }
 
-        //public ApplicationDbContext()
-        //{
+        public ApplicationDbContext()
+        {
 
-        //}
+        }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
@@ -241,13 +241,13 @@ namespace EntityFrameworkCore.Data
         #endregion
 
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder.UseSqlServer("YourConnectionStringHere");
-        //    }
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=DESKTOP-Q7EM1DB\\SQLEXPRESS;Database=CarMaintanance;Trusted_Connection=true;MultipleActiveResultSets=true;encrypt=false;");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
