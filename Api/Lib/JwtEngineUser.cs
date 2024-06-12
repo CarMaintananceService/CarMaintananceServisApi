@@ -55,6 +55,7 @@ namespace Api.Lib
 				Token = token,
 				RefreshToken = _createRefreshToken(),
 				Expiration = accessTokenExpiration,
+				
 			};
 
 			accessTokenResponse.UserInfo = new TokenUserInfo()
@@ -65,7 +66,7 @@ namespace Api.Lib
 				Picture = Convert.ToBase64String(user.Picture ?? new byte[] { }),
 				IsActive = user.IsActive,
 			};
-
+			accessTokenResponse.IsActive = user.IsActive;
 			return accessTokenResponse;
 		}
 
