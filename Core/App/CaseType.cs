@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Cars.Models.Domain
 {
     /// <summary>
-    /// KASA TİPİ
+    /// KASA TİPİ+
     /// </summary>
     public class CaseType : AuditedEntity<int>
     {

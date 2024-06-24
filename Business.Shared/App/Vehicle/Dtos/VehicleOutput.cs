@@ -34,7 +34,7 @@ namespace Cars.Models.Domain
         public DateTime? DateOfRegistration { get; set; }
         public DateTime? ReleaseDate { get; set; }
         public int? EngineDisplacementPowerKW { get; set; }
-        public int? FuelTypeId { get; set; }
+        public FuelType FuelType { get; set; }
         public int? NetWeight { get; set; }
         public DateTime? WarrantyEndDate { get; set; }
         public DateTime? DateOfLastMedicalInspection { get; set; }
@@ -71,6 +71,8 @@ namespace Cars.Models.Domain
         public VehicleTypeOutputSimple VehicleType { get; set; }
 
         public CaseTypeOutput CaseType { get; set; }
+
+        public string? Description { get; set; }
 
     }
 

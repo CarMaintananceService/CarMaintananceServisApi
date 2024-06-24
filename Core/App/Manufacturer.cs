@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Cars.Models.Domain
 {
     /// <summary>
-    /// ÜRETİCİ FİRMA STOCK HAREKETİ TABLOSUNDA
+    /// ÜRETİCİ FİRMA, STOCK HAREKETİ TABLOSUNDA
     /// </summary>
     public class Manufacturer : AuditedEntity<int>
     {
